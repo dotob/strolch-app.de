@@ -1,0 +1,3 @@
+harp compile _harp ./
+git commit -am"homepage"
+git push origin gh-pages
