@@ -33,34 +33,7 @@ html(lang='en')
 			script(src='bootstrap/js/respond.min.js')
 	
 	body(data-spy='scroll', data-target='#topnav')
-		#topnav.navbar.navbar-inverse.navbar-fixed-top
-			.container
-				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					span.navbar-brand 
-						i.fa.fa-female.fa-lg
-						i.fa.fa-child.fa-lg
-						i.fa.fa-male.fa-lg
-						span(style="margin-left: 5px;") strolch-app
-				.navbar-collapse.collapse
-					ul.nav.navbar-nav
-						li.active
-							a(href='#home') Start
-						li
-							a(href='#services') Besonderes
-						li
-							a(href='#features') Features
-						li
-							a(href='#pricing') Preis
-						li
-							a(href='#clients') Kundenstimmen
-						li
-							a(href='#contact') Kontakt
-				// /.navbar-collapse
-		
+		!= partial("_nav")		
 
 		// Main jumbotron for a primary marketing message or call to action
 		#home.jumbotron
@@ -86,9 +59,9 @@ html(lang='en')
 				.col-lg-4.text-center
 					.single-fet
 						div
-							span.icon-stack.icon-4x
-								i.icon-circle.icon-stack-base
-								i.icon-download-alt.icon-light
+							span.fa-stack.fa-4x
+								i.fa.fa-square-o.fa-stack-2x
+								i.fa.fa-twitter.fa-stack-1x
 						h2 Zeit sparen
 						p
 							| Sekundenschnell Kontaktdaten und Termine nachschlagen. Stundenlisten führen und Übersicht
@@ -96,9 +69,9 @@ html(lang='en')
 				.col-lg-4.text-center
 					.single-fet
 						div
-							span.icon-stack.icon-4x
-								i.icon-circle.icon-stack-base
-								i.icon-ok.icon-light
+							span.fa-stack.fa-4x
+								i.fa.fa-square-o.fa-stack-2x
+								i.fa.fa-twitter.fa-stack-1x
 						h2 Geld sparen
 						p
 							| Die strolch-app ist OpenSource und kann kostenfrei genutzt werden. Dennoch bieten wir 
@@ -106,9 +79,9 @@ html(lang='en')
 				.col-lg-4.text-center
 					.single-fet
 						div
-							span.icon-stack.icon-4x
-								i.icon-circle.icon-stack-base
-								i.icon-laptop.icon-light
+							span.fa-stack.fa-4x
+								i.fa.fa-square-o.fa-stack-2x
+								i.fa.fa-twitter.fa-stack-1x
 						h2 Immer Up-to-date
 						p
 							| Programmiert mit Meteor, einem modernen Echtzeit-JavaScript-Framework. Alle Daten werden auf 
