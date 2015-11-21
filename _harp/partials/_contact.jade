@@ -1,0 +1,50 @@
+section#contact.contact
+	.container
+		.row
+			.col-md-6
+				#contactSuccess.alert.alert-success.hidden
+					strong Erfolg!
+					|  Die Nachricht wurde an uns gesendet.
+				#contactError.alert.alert-error.hidden
+					strong Fehler!
+					|  Beim Versenden ist ein Fehler aufgetreten.
+				h2.short
+					| Nehmen Sie 
+					strong Kontakt
+					|  auf
+				form.clearfix(accept-charset='utf-8', method='post', action='http://formspree.io/sk@dotob.de')
+					.row
+						.col-sm-6.form-group
+							label(for='name') Name
+							input#name.form-control.input-lg(type='text', placeholder='', value='', name='name')
+						.col-sm-6.form-group
+							label(for='email') Email Adresse
+							input#email.form-control.input-lg(type='email', placeholder='', value='', name='email')
+					.row
+						.col-sm-12.form-group
+							label(for='message') Nachricht
+							textarea#message.form-control(rows='4', name='message')
+					input(type="hidden" name="_subject" value="A message for strolch-app")
+					button.btn.btn-success.btn-xlg(type='submit') Abschicken
+			.col-md-offset-1.col-md-5
+				br
+				h4.pull-top
+					| Get in 
+					strong touch
+				p
+					| Schreiben Sie ein Nachricht. Fragen uns nach Features oder Betriebsmöglichkeiten.
+				hr
+				h4
+					| Unsere 
+					strong Kontakdaten
+				ul.unstyled
+					li
+						i.icon-map-marker
+						strong Adresse: 
+						| dotob krämer gbr
+						| Maastrichter Str. 8
+						| 52074 Aachen
+					li
+						i.icon-envelope
+						strong Email: 
+						a(href='mailto:sk@dotob.de') sk@dotob.de
