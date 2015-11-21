@@ -25,6 +25,7 @@ html(lang='en')
 		// Bootstrap core CSS
 		link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
 		link(href='css/font-awesome.min.css', rel='stylesheet')
+		link(href='css/featherlight.min.css', rel='stylesheet')
 		// Custom styles for this template
 		link(href='css/style.css', rel='stylesheet')
 		// HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
@@ -33,7 +34,7 @@ html(lang='en')
 			script(src='bootstrap/js/respond.min.js')
 	
 	body(data-spy='scroll', data-target='#topnav')
-		!= partial("_nav")		
+		!= partial("_nav")
 
 		// Main jumbotron for a primary marketing message or call to action
 		#home.jumbotron
@@ -59,7 +60,7 @@ html(lang='en')
 				.col-lg-4.text-center
 					.single-fet
 						div
-							span.fa-stack.fa-4x(style="color: blue;")
+							span.fa-stack.fa-4x(style="color: #5B2F52;")
 								i.fa.fa-square-o.fa-stack-2x
 								i.fa.fa-clock-o.fa-stack-1x
 						h2 Zeit sparen
@@ -69,7 +70,7 @@ html(lang='en')
 				.col-lg-4.text-center
 					.single-fet
 						div
-							span.fa-stack.fa-4x
+							span.fa-stack.fa-4x(style="color: #006275;")
 								i.fa.fa-square-o.fa-stack-2x
 								i.fa.fa-eur.fa-stack-1x
 						h2 Geld sparen
@@ -79,7 +80,7 @@ html(lang='en')
 				.col-lg-4.text-center
 					.single-fet
 						div
-							span.fa-stack.fa-4x(style="color: yellow;")
+							span.fa-stack.fa-4x(style="color: #AFC600;")
 								i.fa.fa-square-o.fa-stack-2x
 								i.fa.fa-bolt.fa-stack-1x
 						h2 Immer Up-to-date
@@ -87,106 +88,7 @@ html(lang='en')
 							| Programmiert mit Meteor, einem modernen Echtzeit-JavaScript-Framework. Alle Daten werden auf 
 							| bei allen aktiven Benutzern aktuell gehalten.
 		
-		section#features.slider
-			.container
-				.inner-page
-					h2.page-headline.large.text-center Mit der strolch-app die KiTa im Blick.
-					p.text-center
-						| Ob Adressen, Termine, Elternstunden oder spezielle Gruppenübersichten, die die Arbeit des Teams 
-						| erleichtern - die strolch-app schafft Überblick und Aktualität wo bisher Papierkrieg und Emailchaos 
-						| herrschten
-
-				.inner-page
-					.row.feature-screenshot
-						.col-md-12.lazy-container.loaded
-							h2
-								| Die 
-								strong Features
-							.row
-								.col-md-6
-									.feature-box
-										.feature-box-icon
-											i.icon-group
-										.feature-box-info
-											h4 Adressübersicht
-											p.tall Von den Eltern selbst gepflegte Kontaktdaten. Immer Aktuell. Immer erreichbar.
-								.col-md-6
-									img.img-responsive(src="images/screenshots/main.png", alt="Responsive image")
-
-					.row.feature-screenshot
-						.col-md-12.lazy-container.loaded
-							.row
-								.col-md-6
-									.feature-box
-										.feature-box-icon
-											i.icon-file
-										.feature-box-info
-											h4 Terminübersicht
-											p.tall Alle KiTa-Termine als Liste und in der Kalenderansicht. Da verpasst man nichts mehr.
-								.col-md-6
-									img.img-responsive(src="images/screenshots/events.png", alt="Responsive image")
-
-
-					.row.feature-screenshot
-						.col-md-12.lazy-container.loaded
-							.row
-								.col-md-6
-									.feature-box
-										.feature-box-icon
-											i.icon-google-plus
-										.feature-box-info
-											h4 Stundenliste
-											p.tall Es werden Elternstunden geleistet? Dann könen diese jetzt einfach eingegeben und sichtbar gemacht werden.
-								.col-md-6
-									img.img-responsive(src="images/screenshots/hours.png", alt="Responsive image")
-
-
-					.row.feature-screenshot
-						.col-md-12.lazy-container.loaded
-							.row
-								.col-md-6
-									.feature-box
-										.feature-box-icon
-											i.icon-adjust
-										.feature-box-info
-											h4 Gruppenübersicht
-											p.tall Jahrgangs-/Gruppenübersicht zur Erleichterung der Aufnamheentscheidung und Gruppenzusammenstellung.
-								.col-md-6
-									img.img-responsive(src="images/screenshots/ang.png", alt="Responsive image")
-
-
-					.row.feature-screenshot
-						.col-md-12.lazy-container.loaded
-							h2
-								| Und noch 
-								strong mehr...
-							.row
-								.col-md-6
-									.feature-box
-										.feature-box-icon
-											i.icon-film
-										.feature-box-info
-											h4 Druckübersicht
-											p.tall Kontaktdaten als druckbare Version für den direkten Zugruff in den Gruppen.
-									.feature-box
-										.feature-box-icon
-											i.icon-magic.small.user
-										.feature-box-info
-											h4 Schnell und aktuell
-											p.tall Durch die eingesetzte Technik sind die Daten dank automatischer Speicherung und Live-Update überall direkt aktuell.
-								.col-md-6
-									.feature-box
-										.feature-box-icon
-											i.icon-reorder
-										.feature-box-info
-											h4 OpenSource
-											p.tall Dank OpenSource kann die strolch-app erweitert und selbstgehostet werden. Trotzdem gibt es die Möglichkeit die strolch-app hosten und warten zu lassen.
-									.feature-box
-										.feature-box-icon
-											i.icon-desktop
-										.feature-box-info
-											h4 Administration
-											p.tall Backups, Einstellungen einfach selber verwalten
+		!= partial("_screenshots")
 
 
 		section#pricing.pricing
@@ -342,7 +244,7 @@ html(lang='en')
 							| Nehmen Sie 
 							strong Kontakt
 							|  auf
-						form.clearfix(accept-charset='utf-8', method='get', action='#')
+						form.clearfix(accept-charset='utf-8', method='post', action='http://formspree.io/sk@dotob.de')
 							.row
 								.col-sm-6.form-group
 									label(for='name') Name
@@ -354,6 +256,7 @@ html(lang='en')
 								.col-sm-12.form-group
 									label(for='message') Nachricht
 									textarea#message.form-control(rows='4', name='message')
+							input(type="hidden" name="_subject" value="A message for strolch-app")
 							button.btn.btn-success.btn-xlg(type='submit') Abschicken
 					.col-md-offset-1.col-md-5
 						br
@@ -397,9 +300,8 @@ html(lang='en')
 								ul
 									li
 										a(href='#') Impressum
-		//
-			Bootstrap core JavaScript
-			==================================================
-		// Placed at the end of the document so the pages load faster
+
+
 		script(src='js/jquery.js')
 		script(src='bootstrap/js/bootstrap.min.js')
+		script(src='js/featherlight.min.js')
